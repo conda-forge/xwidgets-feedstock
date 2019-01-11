@@ -23,10 +23,10 @@ requirements:
     - cmake
     - {{ compiler('cxx') }}
   host:
-    - xeus >=0.17.0,<0.18
+    - xeus >=0.18.1,<0.19
     - cppzmq 4.3.0
     - xtl >=0.5.2,<0.6
-    - xproperty >=0.7,<0.8
+    - xproperty >=0.8,<0.9
     - nlohmann_json >=3.3.0,<4.0
   run:
     # cppzmq, xtl, xproperty and nlohmann_json
