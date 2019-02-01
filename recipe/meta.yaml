@@ -14,7 +14,6 @@ source:
 build:
   number: 0
   skip: true  # [win and vc<14]
-  {% if 'toolchain' in compiler('cxx') %}skip: True{% endif %}  # Only build with modern compilers.
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
 
@@ -26,7 +25,7 @@ requirements:
     - xeus >=0.18.1,<0.19
     - cppzmq 4.3.0
     - xtl >=0.5.2,<0.6
-    - xproperty >=0.8,<0.9
+    - xproperty >=0.8.1,<0.9
     - nlohmann_json >=3.3.0,<4.0
   run:
     # cppzmq, xtl, xproperty and nlohmann_json
