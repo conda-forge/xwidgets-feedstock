@@ -1,6 +1,6 @@
 {% set name = "xwidgets" %}
-{% set version = "0.16.0" %}
-{% set sha256 = "8c359e2f1c15e086306e9bd4ba66138ec3781bfd71c142bca2641108d0be5085" %}
+{% set version = "0.16.1" %}
+{% set sha256 = "bc51bfb5e63a65608aadaaca1a9d7847286c63144630db86946f169bffb11d08" %}
 
 package:
   name: {{ name|lower }}
@@ -12,9 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   skip: true  # [win and vc<14]
-  {% if 'toolchain' in compiler('cxx') %}skip: True{% endif %}  # Only build with modern compilers.
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
 
@@ -26,7 +25,7 @@ requirements:
     - xeus >=0.18.1,<0.19
     - cppzmq 4.3.0
     - xtl >=0.5.2,<0.6
-    - xproperty >=0.8,<0.9
+    - xproperty >=0.8.1,<0.9
     - nlohmann_json >=3.3.0,<4.0
   run:
     # cppzmq, xtl, xproperty and nlohmann_json
