@@ -1,6 +1,6 @@
 {% set name = "xwidgets" %}
-{% set version = "0.17.0" %}
-{% set sha256 = "4cb78194a1491725b149391ff26c5ad7da1ef73ddf8f670852e258c6991f6add" %}
+{% set version = "0.18.0" %}
+{% set sha256 = "72d3ded52854e146e4f07dedbdd8c0db3796dc8b86c18b13b79d5fbe84d98b39" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -22,11 +22,11 @@ requirements:
     - cmake
     - {{ compiler('cxx') }}
   host:
-    - xeus >=0.19.1,<0.20
+    - xeus >=0.20.0,<0.21
     - cppzmq 4.3.0
-    - xtl >=0.6.1,<0.7
+    - xtl >=0.6.5,<0.7
     - xproperty >=0.8.1,<0.9
-    - nlohmann_json >=3.5.0,<4.0
+    - nlohmann_json >=3.6.1,<4.0
   run:
     # cppzmq, xtl, xproperty and nlohmann_json
     # are header-only but required at runtime (!)
