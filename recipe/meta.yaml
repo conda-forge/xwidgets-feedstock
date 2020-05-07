@@ -1,6 +1,6 @@
 {% set name = "xwidgets" %}
-{% set version = "0.20.0" %}
-{% set sha256 = "e16298c558cc2708c514857d2c3b77183bcd42c299e69c5bd0470263f0be7065" %}
+{% set version = "0.20.1" %}
+{% set sha256 = "350f976851093cf503822c6610673b17c5f37b3444513338a25c32346fe5ff07" %}
 
 package:
   name: {{ name|lower }}
@@ -51,7 +51,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'C++ implementation of the Jupyter Interactive widgets'
+  summary: C++ implementation of the Jupyter Interactive widgets
   doc_url: http://xwidgets.readthedocs.io
   dev_url: https://github.com/jupyter-xeus/xwidgets
 
