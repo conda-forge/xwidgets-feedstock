@@ -1,6 +1,6 @@
 {% set name = "xwidgets" %}
-{% set version = "0.20.0" %}
-{% set sha256 = "e16298c558cc2708c514857d2c3b77183bcd42c299e69c5bd0470263f0be7065" %}
+{% set version = "0.20.1" %}
+{% set sha256 = "350f976851093cf503822c6610673b17c5f37b3444513338a25c32346fe5ff07" %}
 
 package:
   name: {{ name|lower }}
@@ -23,10 +23,11 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - xeus >=0.23.3,<0.24
-    - cppzmq 4.3.0
-    - xtl >=0.6.5,<0.7
     - xproperty >=0.10.0,<0.11
-    - nlohmann_json >=3.6.1,<4.0
+    # Version contraints of xtl, nlohmann_json, and cppzmq are set as run_contraints of xeus
+    - cppzmq
+    - xtl
+    - nlohmann_json
   run:
     # cppzmq, xtl, xproperty and nlohmann_json
     # are header-only but required at runtime (!)
