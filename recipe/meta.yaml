@@ -22,7 +22,7 @@ requirements:
     - cmake
     - {{ compiler('cxx') }}
   host:
-    - xeus >=0.24.2,<0.25
+    - xeus >=0.24.1,<0.25
     - xproperty >=0.10.0,<0.11
     # Version contraints of xtl, nlohmann_json, and cppzmq are set as run_contraints of xeus
     - cppzmq
