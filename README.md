@@ -5,11 +5,13 @@ Home: http://quantstack.net/xwidgets
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xwidgets-feedstock/blob/master/LICENSE.txt)
 
 Summary: C++ implementation of the Jupyter Interactive widgets
 
+Development: https://github.com/jupyter-xeus/xwidgets
 
+Documentation: http://xwidgets.readthedocs.io
 
 Current build status
 ====================
