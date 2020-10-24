@@ -1,6 +1,6 @@
 {% set name = "xwidgets" %}
-{% set version = "0.20.2" %}
-{% set sha256 = "6cb9b8de4491011d9c72138086ba4618babffe57cde713c3aacffb4e7fa9e6e6" %}
+{% set version = "0.21.0" %}
+{% set sha256 = "844485195753d3667fd2a5a7fbf4f01d481afa69b3b55732ecb64354d735e82c" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
