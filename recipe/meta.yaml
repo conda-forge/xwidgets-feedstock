@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -22,7 +22,7 @@ requirements:
     - cmake
     - {{ compiler('cxx') }}
   host:
-    - xeus >=0.24.1,<0.25
+    - xeus >=0.24.1,<0.26
     - xproperty >=0.10.0,<0.11
     # Version contraints of xtl, nlohmann_json, and cppzmq are set as run_contraints of xeus
     - cppzmq
