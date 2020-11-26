@@ -1,6 +1,6 @@
 {% set name = "xwidgets" %}
-{% set version = "0.24.0" %}
-{% set sha256 = "8f4a9849478c07d742f8ed1b889dedf0d4271729c90a7b0b691b5990e277d4b9" %}
+{% set version = "0.24.1" %}
+{% set sha256 = "f4af373c9599e7210c7cfa4852b5d842d1b76c9e364072838bb9c9ad10fc2d4d" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -21,6 +21,7 @@ requirements:
   build:
     - cmake
     - {{ compiler('cxx') }}
+    - make  # [unix]
   host:
     - xeus >=0.24.1,<0.26
     - xproperty >=0.10.0,<0.11
