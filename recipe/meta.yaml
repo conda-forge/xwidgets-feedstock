@@ -1,6 +1,6 @@
 {% set name = "xwidgets" %}
-{% set version = "0.26.1" %}
-{% set sha256 = "2024f018b1431eb5fae80c9de5f9d17ae0a6f6704c1c45e24e8c17f584ba3f2f" %}
+{% set version = "0.27.0" %}
+{% set sha256 = "f2ad5627264ec1ce2ea0e4b6896114bd838dd2d961af6252d3a0de762e479963" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -23,7 +23,7 @@ requirements:
     - {{ compiler('cxx') }}
     - make  # [unix]
   host:
-    - xeus >=2.0,<3.0
+    - xeus >=3.0,<4.0
     - xproperty >=0.11.0,<0.12
     # Version contraints of xtl, nlohmann_json, and cppzmq are set as run_contraints of xeus
     - cppzmq
