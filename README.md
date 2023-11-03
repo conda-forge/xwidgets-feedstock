@@ -1,11 +1,11 @@
-About xwidgets
-==============
+About xwidgets-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xwidgets-feedstock/blob/main/LICENSE.txt)
 
 Home: http://quantstack.net/xwidgets
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xwidgets-feedstock/blob/main/LICENSE.txt)
 
 Summary: C++ implementation of the Jupyter Interactive widgets
 
@@ -63,6 +63,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2376&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/xwidgets-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2376&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/xwidgets-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
