@@ -1,6 +1,5 @@
 {% set name = "xwidgets" %}
-{% set version = "0.28.0" %}
-{% set sha256 = "610d26f94af957749da42cfcf970f2c1301b687ba14318d0cacead76e91ec82e" %}
+{% set version = "0.28.1" %}
 
 package:
   name: {{ name|lower }}
@@ -9,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jupyter-xeus/xwidgets/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: ef399a813543e83180b3c4eeaac6d7c6baef94f9911bb74a0ebf2cfc98568ca0
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -23,7 +22,7 @@ requirements:
     - {{ compiler('cxx') }}
     - make  # [unix]
   host:
-    - xeus >=3.0,<4.0
+    - xeus >=3.2,<4.0
     - xproperty >=0.11.0,<0.12
     # Version contraints of xtl, nlohmann_json, and cppzmq are set as run_contraints of xeus
     - cppzmq
