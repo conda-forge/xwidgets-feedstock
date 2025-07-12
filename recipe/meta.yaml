@@ -1,5 +1,5 @@
 {% set name = "xwidgets" %}
-{% set version = "0.29.0" %}
+{% set version = "0.29.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jupyter-xeus/xwidgets/archive/{{ version }}.tar.gz
-  sha256: 07c789b7936b19a123f37ac1edfd0598a89f23e02d4eeffc9976817be68bee42
+  sha256: d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
