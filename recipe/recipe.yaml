@@ -1,5 +1,5 @@
 context:
-  version: "0.30.0"
+  version: "0.31.0"
   build_number: 0
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source: 
   url: https://github.com/jupyter-xeus/xwidgets/archive/${{ version }}.tar.gz
-  sha256: 7412a35ae07123dd3c3c6a1164fbef666be7dd1d7e9a297bfa539da18237aeca
+  sha256: 793ae988e2e6498bb055c917e9c69f77ff476c679cd4b591f316554bdf918b0c
 
 build:
   number: ${{ build_number }}
@@ -25,7 +25,7 @@ requirements:
         - make
   host:
     - xeus >=6,<7
-    - xproperty >=0.12.1,<0.13
+    - xproperty >=0.13,<0.14
     # Version contraints, cppzmq is set as run_contraints of xeus
     - cppzmq
     - nlohmann_json
