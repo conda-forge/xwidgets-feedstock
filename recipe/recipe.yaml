@@ -8,7 +8,7 @@ package:
 
 source: 
   url: https://github.com/jupyter-xeus/xwidgets/archive/${{ version }}.tar.gz
-  sha256: 793ae988e2e6498bb055c917e9c69f77ff476c679cd4b591f316554bdf918b0c
+  sha256: 15285774f64ab2fc7425243f24306ee222ba143c9936d3c5621b685faad9f836
 
 build:
   number: ${{ build_number }}
